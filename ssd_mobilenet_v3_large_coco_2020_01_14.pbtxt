@@ -1,0 +1,1547 @@
+node {
+  name: "FeatureExtractor/MobilenetV3/Conv/weights"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 3
+          }
+          dim {
+            size: 3
+          }
+          dim {
+            size: 3
+          }
+          dim {
+            size: 16
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "FeatureExtractor/MobilenetV3/Conv/BatchNorm/gamma"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 16
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "FeatureExtractor/MobilenetV3/Conv/BatchNorm/beta"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 16
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "FeatureExtractor/MobilenetV3/Conv/BatchNorm/moving_mean"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 16
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "FeatureExtractor/MobilenetV3/Conv/BatchNorm/moving_variance"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 16
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "image_tensor"
+  op: "Placeholder"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_UINT8
+    }
+  }
+  attr {
+    key: "shape"
+    value {
+      shape {
+        dim {
+          size: 1
+        }
+        dim {
+          size: 320
+        }
+        dim {
+          size: 320
+        }
+        dim {
+          size: 3
+        }
+      }
+    }
+  }
+}
+node {
+  name: "Preprocessor/sub"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        float_val: 0
+      }
+    }
+  }
+}
+node {
+  name: "Preprocessor/mul"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        float_val: 2
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_0/weights"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 3
+          }
+          dim {
+            size: 3
+          }
+          dim {
+            size: 256
+          }
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_0/BatchNorm/gamma"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_0/BatchNorm/beta"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_0/BatchNorm/moving_mean"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_0/BatchNorm/moving_variance"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_1/weights"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 3
+          }
+          dim {
+            size: 3
+          }
+          dim {
+            size: 256
+          }
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_1/BatchNorm/gamma"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_1/BatchNorm/beta"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_1/BatchNorm/moving_mean"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_1/BatchNorm/moving_variance"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_2/weights"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 3
+          }
+          dim {
+            size: 3
+          }
+          dim {
+            size: 256
+          }
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_2/BatchNorm/gamma"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_2/BatchNorm/beta"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_2/BatchNorm/moving_mean"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_2/BatchNorm/moving_variance"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_3/weights"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 3
+          }
+          dim {
+            size: 3
+          }
+          dim {
+            size: 256
+          }
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_3/BatchNorm/gamma"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_3/BatchNorm/beta"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_3/BatchNorm/moving_mean"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/BoxPredictionTower/conv2d_3/BatchNorm/moving_variance"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 256
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/WeightSharedConvolutionalBoxHead/weights"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 1
+          }
+          dim {
+            size: 1
+          }
+          dim {
+            size: 256
+          }
+          dim {
+            size: 364
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/WeightSharedConvolutionalBoxHead/biases"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 364
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/WeightSharedConvolutionalClassHead/weights"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 1
+          }
+          dim {
+            size: 1
+          }
+          dim {
+            size: 256
+          }
+          dim {
+            size: 8281
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "WeightSharedConvolutionalBoxPredictor/WeightSharedConvolutionalClassHead/biases"
+  op: "Const"
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 8281
+          }
+        }
+        tensor_content: ""
+      }
+    }
+  }
+}
+node {
+  name: "MultipleGridAnchorGenerator/Identity"
+  op: "Identity"
+  input: "MultipleGridAnchorGenerator/Concatenate"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "MultipleGridAnchorGenerator/GridAnchorGenerator_0/Identity"
+  op: "Identity"
+  input: "MultipleGridAnchorGenerator/GridAnchorGenerator_0/Tile"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "MultipleGridAnchorGenerator/GridAnchorGenerator_1/Identity"
+  op: "Identity"
+  input: "MultipleGridAnchorGenerator/GridAnchorGenerator_1/Tile"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "MultipleGridAnchorGenerator/GridAnchorGenerator_2/Identity"
+  op: "Identity"
+  input: "MultipleGridAnchorGenerator/GridAnchorGenerator_2/Tile"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "MultipleGridAnchorGenerator/GridAnchorGenerator_3/Identity"
+  op: "Identity"
+  input: "MultipleGridAnchorGenerator/GridAnchorGenerator_3/Tile"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "MultipleGridAnchorGenerator/GridAnchorGenerator_4/Identity"
+  op: "Identity"
+  input: "MultipleGridAnchorGenerator/GridAnchorGenerator_4/Tile"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "MultipleGridAnchorGenerator/GridAnchorGenerator_5/Identity"
+  op: "Identity"
+  input: "MultipleGridAnchorGenerator/GridAnchorGenerator_5/Tile"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArray_3"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+        }
+        float_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack/Shape"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack/strided_slice/stack"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack/strided_slice/stack_1"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack/strided_slice/stack_2"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArray_4"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+        }
+        float_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_1/Shape"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_1/strided_slice/stack"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_1/strided_slice/stack_1"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_1/strided_slice/stack_2"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArray_5"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+        }
+        float_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_2/Shape"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_2/strided_slice/stack"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_2/strided_slice/stack_1"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_2/strided_slice/stack_2"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArray_6"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+        }
+        float_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_3/Shape"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_3/strided_slice/stack"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_3/strided_slice/stack_1"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/BatchMultiClassNonMaxSuppression/map/TensorArrayUnstack_3/strided_slice/stack_2"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 1
+          }
+        }
+        int_val: 1
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/ExpandDims/dim"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+        }
+        int_val: 2
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/Cast"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+        }
+        int_val: 100
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/Cast_1"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+        }
+        float_val: 0
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "Postprocessor/Cast_2"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+        }
+        float_val: 1
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+node {
+  name: "Postprocessor/ResizeBilinear/size"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+          dim {
+            size: 2
+          }
+        }
+        int_val: 1
+        int_val: 1
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/Sum"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_INT32
+        tensor_shape {
+        }
+        int_val: 2
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "Postprocessor/ones"
+  op: "Const"
+  attr {
+    key: "value"
+    value {
+      tensor {
+        dtype: DT_FLOAT
+        tensor_shape {
+          dim {
+            size: 1
+          }
+          dim {
+            size: 1
+          }
+          dim {
+            size: 1
+          }
+          dim {
+            size: 1
+          }
+        }
+        float_val: 1
+      }
+    }
+  }
+  attr {
+    key: "dtype"
+    value {
+      type: DT_FLOAT
+    }
+  }
+}
+versions {
+  producer: 26
+}

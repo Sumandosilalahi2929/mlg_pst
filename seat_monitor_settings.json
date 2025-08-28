@@ -1,0 +1,5 @@
+{
+    "warning_interval": 120,
+    "detection_sensitivity": 0.3,
+    "monitoring_active": true
+}
